@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="ThemeStarz">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<title>UIGP</title>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" class="has-loading-screen">
+    <div class="ts-page-wrapper" id="page-top">
+
+        <!--*********************************************************************************************************-->
+        <!--************ HERO ***************************************************************************************-->
+        <!--*********************************************************************************************************-->
+        <header id="ts-hero" class="d-block py-5 ts-separate-bg-element" data-bg-image="assets/img/preview-bg.jpg" data-bg-parallax="scroll" data-bg-parallax-speed="3" data-mask-bottom-wn-color="#fff">
+
+            <div class="text-center p-5">
+                <a href="index.html">
+                    <img src="assets/img/logo-w.png" style="height: auto; width: 18em;" alt="">
+                </a>
+            </div>
+
+            <!--HERO CONTENT ****************************************************************************************-->
+            <div class="container align-self-center py-5">
+                <div class="align-items-center text-center py-3">
+                    <h1>Bienvenue Sur Le Portail Officiel De <br>L'Unité Intégrée De Gestion Des Projets (UIGP)</h1>
+                    <div class="text-center py-5">
+                        <a href="#" target="_blank" id="pfcb" class="btn btn-primary btn-lg m-2 ts-width__200px">PFC-B</a>
+                        <a href="#" target="_blank" id="waca" class="btn btn-light btn-lg m-2 ts-width__200px ts-scroll">WACA-BENIN</a>
+                    </div>
+                </div>
+                <!--end row-->
+            </div>
+            <!--end container-->
+            <!--END HERO CONTENT ************************************************************************************-->
+
+        </header>
+        <!--end #hero-->
+
+        <!--*********************************************************************************************************-->
+        <!--************ CONTENT ************************************************************************************-->
+        <!--*********************************************************************************************************-->
+        <main id="ts-content">
+
+            
+            
+
+        </main>
+        <!--end #content-->
+
+        <!--*********************************************************************************************************-->
+        <!--************ FOOTER *************************************************************************************-->
+        <!--*********************************************************************************************************-->
+        <footer id="ts-footer">
+            <div class="p-4 ts-block text-center">
+                <div class="container">
+                    <small>© 2023 Made by</small>
+                </div>
+                <!--end container-->
+            </div>
+            <!--end ts-block-->
+        </footer>
+        <!--end #footer-->
+    </div>
+    <!--end page-->
+    <script>
+        // Assuming you're loading the JSON asynchronously, you can use fetch
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                // Get the link value from the JSON
+                const pfcb = data.pfcblink;
+                const waca = data.wacalink;
+
+                // Set the href attribute of the anchor tag
+                document.getElementById('pfcb').href = pfcb;
+                document.getElementById('waca').href = waca;
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58"></script>-->
+	<script src="assets/js/isInViewport.jquery.js"></script>
+	<script src="assets/js/jquery.particleground.min.js"></script>
+	<script src="assets/js/scrolla.jquery.min.js"></script>
+	<!--<script src="assets/js/owl.carousel.min.js"></script>-->
+	<!--<script src="assets/js/jquery.countdown.min.js"></script>-->
+    <!--<script src="assets/js/jquery.validate.min.js"></script>-->
+    <!--<script src="assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>-->
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
