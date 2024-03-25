@@ -11,13 +11,28 @@
 	<title>UIGP</title>
 
 </head>
+
+<style>
+     #ts-hero {
+            width: 100%;
+            height: 100%; /* Adjust height as needed */
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        .text-with-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+</style>
 <body data-spy="scroll" data-target=".navbar" class="has-loading-screen">
     <div class="ts-page-wrapper" id="page-top">
 
         <!--*********************************************************************************************************-->
         <!--************ HERO ***************************************************************************************-->
         <!--*********************************************************************************************************-->
-        <header id="ts-hero" class="d-block py-5 ts-separate-bg-element" data-bg-image="assets/img/preview-bg.jpg" data-bg-parallax="scroll" data-bg-parallax-speed="3" data-mask-bottom-wn-color="#fff">
+        <header id="ts-hero" class="d-block py-5 ts-separate-bg-element"  data-bg-parallax="scroll" data-bg-parallax-speed="3" data-mask-bottom-wn-color="#fff">
 
             <div class="text-center p-5">
                 <a href="index.html">
@@ -28,10 +43,10 @@
             <!--HERO CONTENT ****************************************************************************************-->
             <div class="container align-self-center py-5">
                 <div class="align-items-center text-center py-3">
-                    <h1>Bienvenue Sur Le Portail Officiel De <br>L'Unité Intégrée De Gestion Des Projets (UIGP)</h1>
+                    <h1 class="text-with-shadow">Bienvenue sur le portail officiel de <br>l'Unité Intégrée de Gestion des Projets (UIGP)</h1>
                     <div class="text-center py-5">
-                        <a href="#" target="_blank" id="pfcb" class="btn btn-primary btn-lg m-2 ts-width__200px">PFC-B</a>
-                        <a href="#" target="_blank" id="waca" class="btn btn-light btn-lg m-2 ts-width__200px ts-scroll">WACA-BENIN</a>
+                        <a href="#"  id="pfcb" class="btn btn-primary btn-lg m-2 ts-width__200px">PFC Bénin</a>
+                        <a href="#"  id="waca" class="btn btn-light btn-lg m-2 ts-width__200px ts-scroll">WACA-Bénin</a>
                     </div>
                 </div>
                 <!--end row-->
@@ -59,7 +74,7 @@
         <footer id="ts-footer">
             <div class="p-4 ts-block text-center">
                 <div class="container">
-                    <small>© 2023 Made by</small>
+                    <small>© 2024 UIGP</small>
                 </div>
                 <!--end container-->
             </div>
@@ -69,6 +84,41 @@
     </div>
     <!--end page-->
     <script>
+
+
+window.addEventListener('DOMContentLoaded', function () {
+    
+        var images = [
+            'assets/img/preview-bg.jpg',
+            'assets/img/slide2.jpg',
+            'assets/img/slide3.jpg',
+            'assets/img/slide4.jpg',
+            'assets/img/slide5.jpg',
+            'assets/img/slide6.jpg',
+            'assets/img/slide7.jpg',
+            'assets/img/slide8.jpg',
+            'assets/img/slide0.jpg'
+        ];
+
+        var heroElement = document.getElementById('ts-hero');
+        var currentIndex = 0;
+
+        function changeBackgroundImage() {
+            // alert("Hello");
+            heroElement.style.backgroundImage = 'url(' + images[currentIndex] + ')';
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // Initial call
+        changeBackgroundImage();
+
+        // Change image every 3 seconds (adjust interval as needed)
+        setInterval(changeBackgroundImage, 3000);
+    });
+
+
+
+
         // Assuming you're loading the JSON asynchronously, you can use fetch
         fetch('data.json')
             .then(response => response.json())
