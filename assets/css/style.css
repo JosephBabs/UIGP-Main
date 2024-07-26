@@ -2055,6 +2055,7 @@ E. Template Specific Elements
 
 #ts-footer .ts-box {
     margin-top: -3.125rem;
+    bottom: 0;
 }
 
 .ts-tabs-presentation .tab-pane img {
